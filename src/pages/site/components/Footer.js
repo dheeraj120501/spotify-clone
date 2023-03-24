@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -33,7 +34,11 @@ function Footer() {
         <Links>
           <li>USEFUL LINKS</li>
           <li>Support</li>
-          <li>Web Player</li>
+          <li>
+            <Link to="/webplayer" class="link">
+              Web Player
+            </Link>
+          </li>
           <li>Free Mobile App</li>
         </Links>
         <Spacer />
@@ -151,7 +156,7 @@ const Country = styled.div`
 const Links = styled.ul`
   list-style-type: none;
   padding: 20px 90px 0 0;
-  & > li:not(:first-child) {
+  & li:not(:first-child) {
     font-weight: 600;
     font-size: 0.9rem;
     padding: 0 0 30px;
@@ -166,6 +171,14 @@ const Links = styled.ul`
     letter-spacing: 0.5px;
     padding: 0 0 30px;
     font-size: 0.7rem;
+  }
+  & .link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0 0 30px;
+    cursor: pointer;
   }
 `;
 

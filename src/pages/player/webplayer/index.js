@@ -5,7 +5,6 @@ import WebPlayerLogin from "./WebPlayerLogin";
 function Main() {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
-  // console.log(window.location);
   const getUser = (hash) => {
     const user = {};
     hash
